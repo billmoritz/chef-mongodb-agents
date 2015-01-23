@@ -2,6 +2,8 @@
 
 Installs Mongo MMS backup and monitoring agents
 
+[![Build Status](https://travis-ci.org/billmoritz/chef-mongodb-agents.svg)](https://travis-ci.org/billmoritz/chef-mongodb-agents)
+
 ## Requirements
 
 ### Platform
