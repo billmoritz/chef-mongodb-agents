@@ -33,7 +33,8 @@ template "/etc/mongodb-mms/backup-agent.config" do
   notifies :restart, "service[mongodb-mms-backup-agent]"
   variables( :api_key => node['mongodb-agents']['api_key'],
              :mothership => node['mongodb-agents']['mothership'],
-             :use_https => node['mongodb-agents']['use_https'].to_s  )
+             :use_https => node['mongodb-agents']['use_https'].to_s,
+             :group_id => node['mongodb-agents']['group_id'] )
 end
 
 service "mongodb-mms-backup-agent" do

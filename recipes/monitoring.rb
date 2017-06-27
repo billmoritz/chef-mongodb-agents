@@ -32,7 +32,8 @@ template "/etc/mongodb-mms/monitoring-agent.config" do
   mode "0644"
   notifies :restart, "service[mongodb-mms-monitoring-agent]"
   variables( :api_key => node['mongodb-agents']['api_key'],
-             :mms_baseurl => node['mongodb-agents']['mms_baseurl']  )
+             :mms_baseurl => node['mongodb-agents']['mms_baseurl'],
+             :group_id => node['mongodb-agents']['group_id']  )
 end
 
 service "mongodb-mms-monitoring-agent" do

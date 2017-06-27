@@ -12,8 +12,8 @@ Currently Ubuntu and Debian are supported
 
 * `node['mongodb-agents']['backup']['version']` - Backup agent version number
 * `node['mongodb-agents']['monitoring']['version']` - Monitoring agent version number
-* `node['mongodb-agents']['api_key']` - API Key 
-
+* `node['mongodb-agents']['api_key']` - API Key
+* `node['mongodb-agents']['group_id']` - Group ID
 ## Usage
 
 Add the API key to you node and then include the recipes for the agent you want installed
@@ -21,7 +21,8 @@ Add the API key to you node and then include the recipes for the agent you want 
 ```json
 {
   "mongodb-agents": {
-    "api_key": "xxxxxxxxxxxxxxx"
+    "api_key": "xxxxxxxxxxxxxxx",
+    "group_id": "xxxx"
   }
 }
 ```
